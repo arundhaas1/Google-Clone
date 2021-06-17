@@ -1,13 +1,13 @@
 import React,{useState} from 'react'
 import './Search.css'
 import MicIcon from '@material-ui/icons/Mic';
-import {useDatalayerValue} from '../Datalayer'
+import {useDataLayerValue} from '../Datalayer';
 import { Button } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import {useHistory} from 'react-router-dom'
 
 function Search ({hide=false}) {
-    const[{},dispatch]=useDatalayerValue ()
+    const[{term},dispatch]=useDataLayerValue ();
 
     const[input,setInput]=useState("")
     const History=useHistory()
@@ -16,12 +16,13 @@ function Search ({hide=false}) {
             e.preventDefault();
 
             dispatch({
-                type: "SEARCH_TERM",
+                type:  "SET_TERM",
                 term:input,
             })
 
             History.push("/search")
         }
+
     return (
         <form className="search">
             <div className="search__input">

@@ -1,13 +1,12 @@
-import React,{useContext,useReducer,createContext} from 'react'
+import React, { createContext,useContext,useReducer} from 'react';
 
-export const DatalayerContext =createContext();
+export const DataLayerContext = createContext();
 
-export const DatalayerProvider =({initialState,reducer,children})=>{
-    return(
-        <DatalayerContext.Provider value={useReducer(reducer,initialState)}>
+export const DataLayer =({reducer,initialState,children})=>(
+    
+    <DataLayerContext.Provider value={useReducer(reducer, initialState)}  >
         {children}
-      </DatalayerContext.Provider>
-    )
-}
+    </DataLayerContext.Provider>
+    );
 
-export const useDatalayerValue =()=>useContext(DatalayerContext);
+export const useDataLayerValue =()=>useContext(DataLayerContext)

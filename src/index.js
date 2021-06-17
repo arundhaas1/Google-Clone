@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { DatalayerProvider } from './Datalayer';
-import { initialState,reducer } from './Reducer';
+import {DataLayer} from './Datalayer'
+import {reducer,initialState}  from './Reducer';
 
 ReactDOM.render(
   <React.StrictMode>
-    <DatalayerProvider initialState={initialState} reducer={reducer}>
-       <App />
-    </DatalayerProvider>
+    <DataLayer initialState={initialState} reducer={reducer}>
+      <App />
+    </DataLayer>
   </React.StrictMode>,
   document.getElementById('root')
 );
