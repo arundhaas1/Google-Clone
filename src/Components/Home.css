@@ -29,7 +29,6 @@
     display: flex;
     align-items: center;
     min-width: 13vw;
-    margin-right: 20px;
 }
 
 .home__headerright > .MuiSvgIcon-root{

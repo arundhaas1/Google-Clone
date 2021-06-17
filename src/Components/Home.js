@@ -31,7 +31,7 @@ function Home() {
         />
 
         <div className="home__input">
-            <Search />
+            <Search/>
         </div>
       </div>
     </div>
