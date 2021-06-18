@@ -33,7 +33,9 @@ function Home() {
         <div className="home__input">
             <Search/>
         </div>
+        <h2 className="credit">	©Arun Dhas </h2>
       </div>
+      
     </div>
   );
 }

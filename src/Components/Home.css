@@ -47,3 +47,10 @@
     height: 200px;
 
 }
+
+.credit{
+    display: flex;
+    justify-content: center;
+    opacity: 0.4;
+    margin-top: 20px;
+}
